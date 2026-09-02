@@ -1680,97 +1680,86 @@ progress {
     width: 58.33333333%;
   }
 
-  /* JOURNAL */
-  .journal-container {
-    perspective: 1000px;
-    padding: 20px;
-  }
-
-  .journal-page {
-    background-color: #fdfbf7;
-    background-image: radial-gradient(#e0dcd3 1 px, transparent 1px);
-    background-size: 20px 20px;
+  /* TERMINAL WINDOW */
+  .terminal-window {
+    background-color: #121214;
     border-radius: 12px;
-    border-left: 12px solid #8a2be2;
-    padding: 30px 30px 30px 45px;
-    position: relative;
-    font-family: "Architects Daughter", cursive;
-    color: #2b2b2b;
-    min-height: 420px;
-    transform: rotate(1deg);
-    transition: transform 0.3s ease;
+    border: 1px solid #232326;
+    overflow: hidden;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
   }
 
-  .journal-page:hover {
-    transform: rotate(0deg) scale(1.02);
+  .terminal-header {
+    background-color: #1a1a1e;
+    height: 38px;
+    border-bottom: 1px solid #232326;
   }
 
-  .journal-header {
-    border-bottom: 2px dashed #dcd8cf;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-  }
-
-  .journal-title {
-    font-family: monospace;
-    font-weight: bold;
-    color: #6a1b9a;
-  }
-
-  .journal-date {
-    font-size: 0.9rem;
-    font-style: italic;
-  }
-
-  .journal-content .handwriting {
-    font-family: "Caveat", cursive;
-    font-size: 1.35rem;
-    line-height: 1.6;
-    margin-bottom: 15px;
-  }
-
-  .highlight-pink {
-    background: linear-gradient(104deg, rgba(255, 105, 180, 0.2));
-    border-radius: 4px;
-    padding: 2px 6px;
-  }
-
-  .sticker {
-    font-family: "Architects Daughter", sans-serif;
-    font-size: 0.85rem;
-    font-weight: bold;
-    padding: 6px 12px;
-    border-radius: 8px;
-    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0, 1);
+  .terminal-dots .tdot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
     display: inline-block;
-    cursor: default;
-    transition: transform 0.2s;
+  }
+  .tdot-red {
+    background-color: #ff5f56;
+  }
+  .tdot-yellow {
+    background-color: #ffbd2e;
+  }
+  .tdot-green {
+    background-color: #27c93f;
   }
 
-  .sticker:hover {
-    transform: translateY(-3px) rotate(-3px);
+  .terminal-title {
+    font-size: 0.75rem;
+    letter-spacing: 0.3px;
+    color: #8e8e93 !important;
   }
 
-  .sticker-gwc {
-    background-color: #e3f2fd;
-    border: 2px dashed #ff69b4;
-    color: #c71585;
-    transform: rotate(-2deg);
+  .terminal-body {
+    color: #e4e4e7;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    text-align: left;
   }
 
-  .sticker-tennis {
-    background-color: #f4ffb3;
-    border: 2px solid #a3cf20;
-    color: #4e6a00;
-    transform: rotate(4deg);
-    border-radius: 20px;
-  }
-
-  .sticker-coding {
-    background-color: #1e1e1e;
-    border: 1px solid #39ff14;
+  .terminal-prompt {
     color: #39ff14;
-    transform: rotate(-1deg);
+    font-weight: bold;
+  }
+
+  .terminal-input {
+    color: #ffffff;
+    font-weight: 500;
+  }
+
+  .terminal-matrix {
+    background-color: rgba(255, 255, 255, 0.02);
+    border-left: 3px solid #6f42c1;
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .matrix-label {
+    color: #a1a1aa;
+    font-weight: bold;
+    display: inline-block;
+    width: 135px;
+  }
+
+  .matrix-value {
+    color: #f4f4f5;
+  }
+
+  .text-gradient-terminal {
+    background: linear-gradient(45deg, #ff69b4, #6f42c1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
   }
 
   .col-xxl-8 {
@@ -12199,4 +12188,130 @@ html {
     width: 1.5vw;
     left: -2vw;
   }
+}
+
+/* UPDATES FONTS */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+div,
+button {
+  font-family:
+    "Plus Jakarta Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif !important;
+}
+h1.display-3 {
+  font-weight: 800 !important;
+  letter-spacing: -1.5px !important;
+  line-height: 1.15 !important;
+}
+
+h2.display-5 {
+  font-weight: 750 !important;
+  letter-spacing: -0.8px !important;
+}
+
+p.lead {
+  font-size: 1.2rem !important;
+  font-weight: 500 !important;
+  color: #343a40 !important;
+  line-height: 1.6 !important;
+}
+
+p.text-muted {
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  color: #495057 !important;
+  line-height: 1.6 !important;
+}
+
+/* UPDATED COLORS */
+.terminal-window {
+  background-color: #2b3035 !important;
+  border: 1px solid #495057 !important;
+  border-radius: 12px !important;
+  overflow: hidden;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12) !important;
+}
+
+.terminal-header {
+  background-color: #343a40 !important;
+  height: 40px !important;
+  border-bottom: 1px solid #495057 !important;
+}
+
+.terminal-dots .tdot {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  display: inline-block;
+}
+.tdot-red {
+  background-color: #ff5f56 !important;
+}
+.tdot-yellow {
+  background-color: #ffbd2e !important;
+}
+.tdot-green {
+  background-color: #27c93f !important;
+}
+
+.terminal-title {
+  font-size: 0.78rem !important;
+  color: #adb5bd !important;
+  font-weight: 500 !important;
+}
+
+.terminal-body {
+  color: #f8f9fa !important;
+  font-size: 0.88rem !important;
+  line-height: 1.65 !important;
+}
+
+.terminal-prompt {
+  color: #4af626 !important;
+  font-weight: bold !important;
+}
+.terminal-input {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+.terminal-matrix {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+  border-left: 3px solid #e21e80 !important;
+  padding: 14px 18px !important;
+  border-radius: 0 8px 8px 0 !important;
+}
+
+.matrix-label {
+  color: #ced4da !important;
+  font-weight: 700 !important;
+  display: inline-block;
+  width: 135px;
+}
+.matrix-value {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+}
+
+.text-gradient-terminal {
+  background: linear-gradient(45deg, #e21e80, #6f42c1) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  font-weight: 700 !important;
 }
